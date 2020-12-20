@@ -13,11 +13,10 @@ fi
 
 if [ ! -f "${build_dir}/build.ninja" ] ; then
     cd "${build_dir}"
-    cmake "${script_dir}" -G "Ninja"
+    cmake "${script_dir}" -G "Ninja" || exit 1
 fi
 
-cmake --build "${build_dir}"
+cmake --build "${build_dir}" || exit 1
 
 export CTEST_OUTPUT_ON_FAILURE=ON
 cmake --build "${build_dir}" --target test
-
