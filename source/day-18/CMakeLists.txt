@@ -1,9 +1,10 @@
 set(DAY 18)
+set(SOURCES math.cc parser.cc)
 
 find_package(Boost REQUIRED)
 
 add_library(day-${DAY})
-target_sources(day-${DAY} PRIVATE math.cc parser.cc)
+target_sources(day-${DAY} PRIVATE ${SOURCES})
 target_link_libraries(day-${DAY} PUBLIC settings Boost::headers)
 
 add_executable(day-${DAY}-exe)
