@@ -1,11 +1,9 @@
 set(DAY 16)
 set(SOURCES ticket.cc)
 
-find_package(Boost REQUIRED)
-
 add_library(day-${DAY})
 target_sources(day-${DAY} PRIVATE ${SOURCES})
-target_link_libraries(day-${DAY} PUBLIC settings Boost::headers)
+target_link_libraries(day-${DAY} PUBLIC settings)
 
 add_executable(day-${DAY}-exe)
 target_sources(day-${DAY}-exe PRIVATE main.cc)
