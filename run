@@ -1,0 +1,20 @@
+#!/bin/bash
+
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+build_dir="${WORKSPACE:-${script_dir}/_build}"
+
+for day in "$@" 
+do
+  exe=${build_dir}/source/day-${day}/day-${day}-exe
+  input=${script_dir}/source/day-${day}/input.txt
+
+  echo "# Day ${day} #"
+
+  if [[ -f "${input}" ]]; then
+    ${exe} < ${input}
+  else
+    ${exe}
+  fi
+
+  echo ""
+done
