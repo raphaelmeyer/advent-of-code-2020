@@ -8,13 +8,12 @@ do
   exe=${build_dir}/source/day-${day}/day-${day}-exe
   input=${script_dir}/source/day-${day}/input.txt
 
-  echo "# Day ${day} #"
-
+  echo ""
+  echo "### Day ${day} ###"
   if [[ -f "${input}" ]]; then
     ${exe} < ${input}
   else
     ${exe}
   fi
-
-  echo ""
 done
+echo ""
