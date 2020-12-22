@@ -1,7 +1,7 @@
 add_subdirectory(day-01)
 add_subdirectory(day-02)
 add_subdirectory(day-03)
-
+add_subdirectory(day-04)
 add_subdirectory(day-05)
 add_subdirectory(day-06)
 
