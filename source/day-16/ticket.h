@@ -41,3 +41,5 @@ uint64_t error_rate(Data const &data);
 std::map<std::string, std::set<uint>> find_candidates(Tickets const &valids,
                                                       Ticket const &my_ticket,
                                                       Fields const &fields);
+
+uint64_t calculate_solution(Data const &data);

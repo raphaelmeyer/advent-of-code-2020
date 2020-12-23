@@ -7,6 +7,6 @@ int main() {
   auto const weak = find_weakness(25, values);
   auto const weakness = break_weakness(weak, values);
 
-  std::cout << weak << "\n";
-  std::cout << weakness << "\n";
+  std::cout << "Part I : " << weak << "\n";
+  std::cout << "Part II : " << weakness << "\n";
 }

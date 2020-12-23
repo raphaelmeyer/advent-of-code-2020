@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <cmath>
-#include <iostream>
 #include <map>
 #include <numeric>
 #include <ranges>
@@ -64,9 +63,6 @@ uint64_t jolt_permutations(std::vector<uint> const &adapters) {
   for (auto seq : seqs) {
     auto seq_count = count_permutations(seq.first);
     count *= std::pow(seq_count, seq.second);
-
-    std::cout << seq.second << " x length of " << seq.first << " -> "
-              << seq_count << "\n";
   }
 
   return count;

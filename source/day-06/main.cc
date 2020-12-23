@@ -21,6 +21,9 @@ int main() {
     count_all.push_back(all_yes(answers));
   }
 
-  std::cout << std::accumulate(count_any.begin(), count_any.end(), 0) << "\n";
-  std::cout << std::accumulate(count_all.begin(), count_all.end(), 0) << "\n";
+  std::cout << "Part I : "
+            << std::accumulate(count_any.begin(), count_any.end(), 0) << "\n";
+
+  std::cout << "Part II : "
+            << std::accumulate(count_all.begin(), count_all.end(), 0) << "\n";
 }

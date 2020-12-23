@@ -4,6 +4,6 @@
 
 int main() {
   auto const result = total_sum(std::cin);
-  std::cout << "New math :          " << result.first << "\n";
-  std::cout << "Advanced new math : " << result.second << "\n";
+  std::cout << "Part I : " << result.first << "\n";
+  std::cout << "Part II : " << result.second << "\n";
 }
