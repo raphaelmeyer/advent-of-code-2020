@@ -1,8 +1,20 @@
-#include "xxx.h"
+#include "door.h"
 
 #include <iostream>
 
 int main() {
-  std::cout << "Part I : " << 0 << "\n";
-  std::cout << "Part II : " << 0 << "\n";
+  auto card = brute_force(7, 15733400);
+  auto door = brute_force(7, 6408062);
+
+  auto e1 = transform(6408062, card);
+  auto e2 = transform(15733400, door);
+
+  if (e1 != e2) {
+    throw std::logic_error{"secret not so shared"};
+  }
+
+  std::cout << "Part I : " << e1 << "\n";
+  std::cout << "Part II : "
+            << "phew..."
+            << "\n";
 }

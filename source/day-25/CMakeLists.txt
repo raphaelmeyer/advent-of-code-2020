@@ -1,5 +1,5 @@
 set(DAY 25)
-set(SOURCES xxx.cc)
+set(SOURCES door.cc)
 
 add_library(day-${DAY})
 target_sources(day-${DAY} PRIVATE ${SOURCES})
